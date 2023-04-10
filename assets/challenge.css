@@ -19,7 +19,7 @@ body {
 .product {
     background-color: white;
     border-radius: 10px;
-    /*overflow: hidden;*/
+    overflow: hidden;
     display: flex;
     max-width: 500px;
     margin-left: 0.5rem;
@@ -30,9 +30,6 @@ body {
 
 .product-image {
     width: 50%;
-    /*border-radius: inherit;*/
-    /*border-top-right-radius: 0;*/
-    /*border-bottom-right-radius: 0;*/
 }
 
 .product-image img {
@@ -69,12 +66,6 @@ body {
     font-size: 12px;
     margin-bottom: 1.5rem;
 }
-
-/*.product-price {*/
-    /*flex-grow: 1;*/
-    /*display: flex;*/
-    /*align-items: flex-end;*/
-/*}*/
 
 .current-price {
     color: rgb(63, 139, 111);
