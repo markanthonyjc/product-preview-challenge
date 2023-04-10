@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    /*min-width: 100vw;*/
+    background-color: rgb(243, 234, 227);
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: center;
+    align-items: center;
+    font-family: Fraunces;
+}
+
+/* main */
+.product {
+    background-color: white;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+    display: flex;
+    max-width: 500px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* image container */
+
+.product-image {
+    width: 50%;
+    /*border-radius: inherit;*/
+    /*border-top-right-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* info container */
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1.5rem;
+}
+
+.product-detail .type {
+    font-family: Montserrat;
+    letter-spacing: 3px;
+    color: rgb(110, 110, 118);
+    margin-bottom: 1.25rem;
+    font-size: 12px;
+}
+
+.product-detail .name {
+    padding-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-detail .description {
+    font-family: Montserrat;
+    color: rgb(110, 110, 118);
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+}
+
+/*.product-price {*/
+    /*flex-grow: 1;*/
+    /*display: flex;*/
+    /*align-items: flex-end;*/
+/*}*/
+
+.current-price {
+    color: rgb(63, 139, 111);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.product-price .old-price {
+    font-family: Montserrat;
+    color: rgb(110, 110, 118);
+    font-size: 0.75rem;
+    text-decoration: line-through;
+    vertical-align: super;
+}
+
+.product-price .btn-add {
+    background-color: rgb(63, 139, 111);
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    height: 3rem;
+    width: 100%;
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.product-price .btn-add .btn-icon {
+    display: inline-block;
+    background-image: url("/images/icon-cart.svg");
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.product-price .btn-add:hover {
+    background-color: rgb(26, 64, 49);
+}
+
+@media (max-width: 375px) {
+    .product {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .product-detail .name {
+        padding-right: unset;
+    }
+
+    .product-image,
+    .product-detail {
+        width: 100%;
+    }
+
+    .product-image img {
+        content: url("/images/image-product-mobile.jpg");
+    }
+
+    .product {
+        flex-direction: column;
+    }
+}
